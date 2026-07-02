@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="YTÜ - Yalova Temizlik Ürünleri. Smy Simay güvencesiyle Yalova toptan ve perakende profesyonel temizlik, ambalaj ve ofis sarf malzemeleri tedariği.">
-    <meta name="keywords" content="Yalova toptan, perakende profesyonel temizlik, güçlü markaların Yalova bayilikleri, kağıt grupları, deterjanlar, ambalajlar, Yalova temizlik ürünleri">
-    <title>YTÜ | Yalova Temizlik Ürünleri - Smy Simay</title>
+    <meta name="description" content="Yalova toptan temizlik malzemeleri tedarikçisi. Krl Kimya, Chook Temiz, Yöntem Kağıt gibi güçlü markalarla restoran, hastane ve ofislere en iyi fiyat ve en yüksek kalite garantisi.">
+    <meta name="keywords" content="Yalova temizlik malzemeleri, toptan temizlik, Chook Temiz, Krl Kimya, karton bardak, Z katlı havlu, dispanser havlu, Dyno çöp torbaları, Yalova toptancısı">
+    <title>YTÜ | Yalova Temizlik Ürünleri - En İyi Fiyat, En Yüksek Kalite</title>
     <style>
         /* --- Temel Ayarlar ve Renkler --- */
         :root {
-            --primary-blue: #0f3460;
-            --secondary-blue: #1a1a2e;
-            --accent-green: #00b894;
-            --light-bg: #f8f9fa;
-            --text-color: #333333;
+            --primary-blue: #0A2540;
+            --secondary-blue: #1A365D;
+            --accent-green: #00D084;
+            --light-green: #E6FBF2;
+            --light-bg: #F8FAFC;
+            --text-color: #334155;
+            --text-muted: #64748B;
             --white: #ffffff;
+            --border-color: #E2E8F0;
         }
 
         * {
@@ -28,6 +31,7 @@
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--light-bg);
+            scroll-behavior: smooth;
         }
 
         a {
@@ -38,7 +42,7 @@
         /* --- Header ve Navigasyon --- */
         header {
             background-color: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
             position: fixed;
             width: 100%;
             top: 0;
@@ -50,20 +54,21 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem 5%;
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
         }
 
         .logo h1 {
             color: var(--primary-blue);
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 800;
             letter-spacing: -1px;
+            line-height: 1.1;
         }
 
         .logo span {
-            color: var(--accent-green);
-            font-size: 1rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
             display: block;
             font-weight: 500;
         }
@@ -72,11 +77,12 @@
             display: flex;
             gap: 2rem;
             list-style: none;
+            align-items: center;
         }
 
         .nav-links a {
             font-weight: 600;
-            color: var(--secondary-blue);
+            color: var(--primary-blue);
             transition: color 0.3s;
         }
 
@@ -86,172 +92,242 @@
 
         .contact-btn {
             background-color: var(--accent-green);
-            color: var(--white) !important;
-            padding: 0.5rem 1.5rem;
-            border-radius: 25px;
-            font-weight: bold;
+            color: var(--primary-blue) !important;
+            padding: 0.6rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 700;
+            box-shadow: 0 4px 14px rgba(0, 208, 132, 0.3);
+            transition: transform 0.2s;
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-2px);
         }
 
         /* --- Hero Section (Giriş) --- */
         .hero {
-            background: linear-gradient(135deg, var(--secondary-blue) 0%, var(--primary-blue) 100%);
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
             color: var(--white);
-            padding: 150px 5% 100px;
+            padding: 180px 5% 120px;
             text-align: center;
         }
 
         .hero h2 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .hero h2 span {
+            color: var(--accent-green);
         }
 
         .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            opacity: 0.9;
+            font-size: 1.3rem;
+            max-width: 900px;
+            margin: 0 auto 2.5rem;
+            color: #CBD5E1;
         }
 
-        /* --- SEO Hikayesi & Hakkımızda --- */
-        .seo-story {
-            padding: 5rem 5%;
-            background-color: var(--white);
-            text-align: center;
+        /* --- Kalite ve Fiyat Vurgusu --- */
+        .badges-container {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
         }
 
-        .container {
-            max-width: 1100px;
+        .badge {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* --- Ürün ve Marka Kategorileri (SEO Uyumlu Grid) --- */
+        .products-section {
+            padding: 6rem 5%;
+            max-width: 1300px;
             margin: 0 auto;
         }
 
-        .section-title {
-            font-size: 2.2rem;
-            color: var(--primary-blue);
-            margin-bottom: 1.5rem;
-        }
-
-        .story-text {
-            font-size: 1.1rem;
-            text-align: justify;
-            text-align-last: center;
-            line-height: 1.8;
-            color: #555;
-        }
-
-        .highlight {
-            color: var(--accent-green);
-            font-weight: bold;
-        }
-
-        /* --- Hizmetlerimiz & Sektörler --- */
-        .services {
-            padding: 5rem 5%;
-            background-color: var(--light-bg);
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        .section-header {
             text-align: center;
-            border-bottom: 4px solid var(--accent-green);
-            transition: transform 0.3s;
+            margin-bottom: 4rem;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card h3 {
+        .section-header h2 {
+            font-size: 2.5rem;
             color: var(--primary-blue);
             margin-bottom: 1rem;
         }
 
-        /* --- Neden Biz? (Fiyat & Lojistik) --- */
-        .why-us {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            padding: 4rem 5%;
-            text-align: center;
-        }
-        
-        .why-us p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 1rem auto;
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto;
         }
 
-        /* --- İletişim / Footer --- */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .category-card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--accent-green);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .category-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+
+        .category-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .category-card h3 {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--light-bg);
+            padding-bottom: 1rem;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+
+        .tag {
+            background-color: var(--light-green);
+            color: var(--secondary-blue);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid rgba(0, 208, 132, 0.2);
+        }
+
+        /* --- SEO Hikayesi --- */
+        .seo-content {
+            background-color: var(--white);
+            padding: 5rem 5%;
+        }
+
+        .seo-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: justify;
+            text-align-last: center;
+        }
+
+        .seo-container p {
+            font-size: 1.15rem;
+            color: var(--text-color);
+            line-height: 1.9;
+        }
+
+        .seo-container strong {
+            color: var(--primary-blue);
+        }
+
+        /* --- Footer --- */
         footer {
-            background-color: var(--secondary-blue);
+            background-color: var(--primary-blue);
             color: var(--white);
-            padding: 4rem 5% 2rem;
+            padding: 5rem 5% 2rem;
         }
 
         .footer-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
+            gap: 3rem;
+            max-width: 1300px;
             margin: 0 auto;
             border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding-bottom: 2rem;
+            padding-bottom: 3rem;
         }
 
         .footer-col h4 {
             color: var(--accent-green);
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             margin-bottom: 1.5rem;
         }
 
-        .footer-col p, .footer-col ul {
-            opacity: 0.8;
+        .footer-col p {
+            color: #CBD5E1;
+        }
+
+        .contact-list {
             list-style: none;
-            line-height: 2;
         }
 
-        .contact-info li {
-            margin-bottom: 1rem;
+        .contact-list li {
+            margin-bottom: 1.2rem;
             display: flex;
-            align-items: flex-start;
+            flex-direction: column;
         }
 
-        .contact-info strong {
-            color: var(--white);
-            margin-right: 0.5rem;
+        .contact-label {
+            font-size: 0.9rem;
+            color: #94A3B8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.3rem;
         }
 
-        .phone-highlight {
-            font-size: 1.5rem;
+        .contact-value {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .phone-number {
+            font-size: 1.8rem;
             color: var(--accent-green);
-            font-weight: bold;
-            display: block;
-            margin-top: 0.5rem;
+            font-weight: 800;
         }
 
         .copyright {
             text-align: center;
             padding-top: 2rem;
-            opacity: 0.6;
-            font-size: 0.9rem;
+            color: #64748B;
+            font-size: 0.95rem;
         }
 
-        /* --- Mobil Uyumluluk --- */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none; /* Mobilde hamburger menü eklenebilir, şimdilik gizli */
-            }
-            .hero h2 {
-                font-size: 2.2rem;
-            }
+            .nav-links { display: none; }
+            .hero h2 { font-size: 2.2rem; }
+            .badges-container { flex-direction: column; align-items: center; }
         }
     </style>
 </head>
@@ -260,102 +336,133 @@
     <header>
         <div class="nav-container">
             <div class="logo">
-                <a href="https://smysimay.com">
+                <a href="#">
                     <h1>YTÜ</h1>
-                    <span>Yalova Temizlik Ürünleri <br>by Smy Simay</span>
+                    <span>Yalova Temizlik Ürünleri <b>by Smy Simay</b></span>
                 </a>
             </div>
             <ul class="nav-links">
-                <li><a href="#hikayemiz">Hakkımızda</a></li>
-                <li><a href="#sektorler">Sektörler & Ürünler</a></li>
-                <li><a href="#iletisim" class="contact-btn">Hemen Ulaşın</a></li>
+                <li><a href="#kategoriler">Markalarımız</a></li>
+                <li><a href="#hakkimizda">Neden Biz?</a></li>
+                <li><a href="#iletisim" class="contact-btn">Sipariş Ver</a></li>
             </ul>
         </div>
     </header>
 
     <section class="hero">
-        <h2>İşletmenizin Hijyenine Yön Veren Profesyonel Çözüm Ortağınız</h2>
-        <p>Restoranlardan hastanelere, okullardan fabrikalara kadar tüm toplu tüketim noktaları için yüksek kaliteli temizlik ürünleri, sarf malzemeleri ve ekipman tedariği. Kendi araç filomuzla kapınıza kadar hızlı ve güvenli teslimat.</p>
-        <a href="#iletisim" style="background-color: var(--accent-green); color: white; padding: 1rem 2.5rem; border-radius: 30px; font-size: 1.1rem; font-weight: bold; display: inline-block; margin-top: 1rem;">Sipariş ve Bilgi İçin Tıklayın</a>
+        <div class="badges-container">
+            <div class="badge">✓ Kendi Araçlarımızla Teslimat</div>
+            <div class="badge">✓ Toptan & Perakende Satış</div>
+            <div class="badge">✓ Profesyonel Çözüm Ortaklığı</div>
+        </div>
+        <h2>İşletmeniz İçin <span>En İyi Fiyat,</span> <br>En Yüksek Kalite</h2>
+        <p>Restoran, kafe, hastane, yurt, okul ve fabrikaların tüm sarf malzemesi tedariği artık tek elde. Seçkin markaların Yalova bayilikleri ile bütçenizi koruyan yüksek kaliteli çözümler sunuyoruz.</p>
     </section>
 
-    <section id="hikayemiz" class="seo-story">
-        <div class="container">
-            <h2 class="section-title">Temizliğin Profesyonel Yüzü</h2>
-            <p class="story-text">
-                <a href="https://smysimay.com" class="highlight">Smy Simay</a> güvencesiyle kurulan YTÜ - Yalova Temizlik Ürünleri olarak, işletmenizin tüm hijyen ve sarf ihtiyaçlarını tek bir çatı altında topluyoruz. Sektördeki tecrübemizi, <span class="highlight">güçlü markaların Yalova bayilikleri</span> ile harmanlayarak sizlere daima en iyisini sunmayı hedefliyoruz. İster küçük bir kafe ister büyük bir sanayi tesisi olun; endüstriyel hijyen standartlarını belirleyen <span class="highlight">deterjanlar</span>, dayanıklı ve doğa dostu <span class="highlight">ambalajlar</span> ile günlük operasyonlarınızın vazgeçilmezi olan <span class="highlight">kağıt grupları</span> ihtiyaçlarınızda her zaman yanınızdayız. <span class="highlight">Yalova toptan</span> ve <span class="highlight">perakende profesyonel temizlik</span> pazarında sadece bir tedarikçi değil, işinizi kolaylaştıran stratejik bir çözüm ortağı olma vizyonuyla hareket ediyoruz. Kaliteli ürünleri uygun fiyat politikasıyla buluşturarak, işletmenizin bütçesini ve itibarını koruyoruz.
+    <section id="kategoriler" class="products-section">
+        <div class="section-header">
+            <h2>Geniş Ürün Yelpazesi ve Güçlü Markalar</h2>
+            <p>Sektörün lider üreticileriyle çalışıyor, işletmenizin operasyonel yükünü hafifletecek en uygun maliyetli profesyonel ürünleri kapınıza kadar getiriyoruz.</p>
+        </div>
+
+        <div class="category-grid">
+            <div class="category-card">
+                <h3>Endüstriyel Kimya & Kozmetik</h3>
+                <div class="tag-cloud">
+                    <span class="tag">Krl Kimya</span>
+                    <span class="tag">Chook Temiz</span>
+                    <span class="tag">Chk Deterjan</span>
+                    <span class="tag">SoapRano Sabun</span>
+                    <span class="tag">VeroSeta Kozmetik</span>
+                    <span class="tag">Monnica</span>
+                    <span class="tag">GK Gümüş Kozmetik</span>
+                    <span class="tag">Kimyalog</span>
+                    <span class="tag">Flore</span>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <h3>Kağıt Grupları & Dispanserler</h3>
+                <div class="tag-cloud">
+                    <span class="tag">Yöntem Kağıt</span>
+                    <span class="tag">Evo Beyond</span>
+                    <span class="tag">Only</span>
+                    <span class="tag">Long Z Fold</span>
+                    <span class="tag">Dispanser Havlu</span>
+                    <span class="tag">Hareketli Havlu Kağıt</span>
+                    <span class="tag">Peçete</span>
+                    <span class="tag">Robi Z Katlı Dispanser Havlu</span>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <h3>Plastik, Ambalaj & Ekipmanlar</h3>
+                <div class="tag-cloud">
+                    <span class="tag">Flosoft</span>
+                    <span class="tag">Çetin Plastik</span>
+                    <span class="tag">Dyno Çöp Torbaları</span>
+                    <span class="tag">Karton Bardak (4 oz)</span>
+                    <span class="tag">Karton Bardak (7 oz)</span>
+                    <span class="tag">Karton Bardak (8 oz)</span>
+                    <span class="tag">Karton Bardak (12 oz)</span>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <h3>Temizlik Tekstili & Gereçleri</h3>
+                <div class="tag-cloud">
+                    <span class="tag">Silver Home</span>
+                    <span class="tag">Kukuroğlu Tekstil</span>
+                    <span class="tag">Profesyonel Mop Sistemleri</span>
+                    <span class="tag">Endüstriyel Temizlik Bezleri</span>
+                    <span class="tag">Yer Yıkama Fırçaları</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hakkimizda" class="seo-content">
+        <div class="seo-container">
+            <p>
+                <strong>Smy Simay</strong> çatısı altında faaliyet gösteren <strong>Yalova Temizlik Ürünleri (YTÜ)</strong>, temizlik ve ambalaj malzemeleri sektöründe işletmelere değer katan stratejik bir ortaktır. <strong>"En iyi fiyat, en yüksek kalite"</strong> vizyonuyla yola çıkarak, işletmenizin mutfağından lavabosuna kadar ihtiyaç duyduğu tüm ürünleri tek noktadan tedarik etmenizi sağlıyoruz. <strong>Krl Kimya</strong>, <strong>Chook Temiz</strong> ve <strong>Chk Deterjan</strong> gibi güçlü markaların profesyonel temizlik kimyasallarını sağlarken; <strong>Yöntem Kağıt</strong>, <strong>Evo Beyond</strong>, <strong>Only</strong> ve <strong>Long Z Fold</strong> kağıt grupları ile sarf malzeme ihtiyaçlarınızı eksiksiz karşılıyoruz. 
+                <br><br>
+                Ziyaretçi trafiği yoğun olan hastaneler, kafeler ve fabrikalar için olmazsa olmaz <strong>Dispanser Havlu</strong>, <strong>Hareketli Havlu Kağıt</strong>, <strong>Peçete</strong> ve özel tasarım <strong>Robi Z Katlı Dispanser Havlu</strong> makineleri stoklarımızda daima mevcuttur. Paket servis ve içecek ikramlarında kalite arayan işletmeler için <strong>4 oz, 7 oz, 8 oz ve 12 oz karton bardak</strong> çeşitlerimiz; dayanıklılığıyla bilinen <strong>Çetin Plastik</strong>, <strong>Flosoft</strong> ekipmanları ve <strong>Dyno Çöp Torbaları</strong> ile gücümüze güç katıyoruz. Ayrıca kişisel bakım ve otel kozmetiğinde <strong>VeroSeta Kozmetik</strong>, <strong>Monnica</strong>, <strong>GK Gümüş Kozmetik</strong>, <strong>Kimyalog</strong>, <strong>Flore</strong> ve <strong>SoapRano Sabun</strong> güvencesiyle kaliteden taviz vermiyoruz. Tekstil ihtiyaçlarınızda ise sektörün öncüsü <strong>Silver Home (Kukuroğlu Tekstil)</strong> ürünleri ile Yalova toptan temizlik piyasasına yön veriyoruz.
             </p>
         </div>
     </section>
 
-    <section id="sektorler" class="services">
-        <div class="container">
-            <h2 class="section-title" style="text-align: center;">Kapsamlı Ürün Ağı ve Geniş Hizmet Yelpazesi</h2>
-            <p style="text-align: center; color: #666; font-size: 1.1rem;">Toplu tüketim noktalarının tüm ihtiyaçlarına anında cevap veriyoruz.</p>
-            
-            <div class="grid-container">
-                <div class="card">
-                    <h3>Gıda & Konaklama</h3>
-                    <p>Restoranlar, Kafeler ve Oteller için endüstriyel mutfak hijyen ürünleri, peçete ve masaüstü kağıt grupları, gıda ambalajları.</p>
-                </div>
-                <div class="card">
-                    <h3>Sağlık & Bakım</h3>
-                    <p>Hastaneler, Bakım Evleri ve Klinikler için yüksek standartlı yüzey dezenfektanları ve profesyonel hijyen ekipmanları.</p>
-                </div>
-                <div class="card">
-                    <h3>Eğitim & Kurumsal</h3>
-                    <p>Okullar, Yurtlar ve Ofisler için genel temizlik maddeleri, tuvalet kağıdı grupları ve günlük ofis sarf malzemeleri.</p>
-                </div>
-                <div class="card">
-                    <h3>Sanayi & Üretim</h3>
-                    <p>Fabrikalar ve İmalathaneler için ağır kir sökücüler, endüstriyel temizlik otomatları ve dayanıklı temizlik bezleri.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="why-us">
-        <h2>Neden YTÜ'yü Tercih Etmelisiniz?</h2>
-        <p>Ürünlerinizi aracı kargo firmalarıyla değil, <strong>kendi özel lojistik araçlarımızla</strong> doğrudan işletmenize teslim ediyoruz. Bu sayede hem zaman kaybını önlüyor hem de taşıma esnasında yaşanabilecek hasarların önüne geçiyoruz. Üstün kaliteyi, rekabetçi ve uygun fiyatlarla birleştirerek işletmenize değer katıyoruz.</p>
-    </section>
-
-    <section id="iletisim"></section>
-    <footer>
+    <footer id="iletisim">
         <div class="footer-grid">
             <div class="footer-col">
-                <h4>Kurumsal</h4>
-                <p>YTÜ - Yalova Temizlik Ürünleri, bir <strong>Smy Simay</strong> kuruluşudur. İşletmenizin temizlik, ambalaj ve ofis sarf malzemelerindeki güvenilir tedarikçisidir.</p>
-                <br>
-                <a href="https://smysimay.com" style="color: var(--accent-green); text-decoration: underline;">smysimay.com</a>
+                <h4>Hakkımızda</h4>
+                <p>YTÜ - Yalova Temizlik Ürünleri, kendi lojistik ağıyla Yalova ve çevresindeki kurumsal işletmelere kesintisiz, hızlı ve ekonomik temizlik sarf malzemesi tedariği sağlayan profesyonel bir <strong>Smy Simay</strong> iştirakidir.</p>
             </div>
             
             <div class="footer-col">
-                <h4>Ürün Kategorilerimiz</h4>
-                <ul>
-                    <li>Profesyonel Temizlik Kimyasalları</li>
-                    <li>Endüstriyel Kağıt Grupları</li>
-                    <li>Sarf Malzemeler ve Ambalajlar</li>
-                    <li>Temizlik Araç ve Gereçleri</li>
-                    <li>Ofis ve Kurumsal Sarf Malzemeleri</li>
-                </ul>
+                <h4>Hizmet Noktaları</h4>
+                <p>Toplu Tüketim Noktaları, Restoranlar, Kafeler, Hastaneler, Bakım Evleri, Yurtlar, Okullar, İmalathaneler ve Fabrikalar.</p>
             </div>
 
             <div class="footer-col">
-                <h4>İletişim Bilgilerimiz</h4>
-                <ul class="contact-info">
+                <h4>İletişim & Sipariş</h4>
+                <ul class="contact-list">
                     <li>
-                        <strong>Yetkili:</strong> 
-                        <div>Kerim Bey <span class="phone-highlight">0533 978 36 77</span></div>
+                        <span class="contact-label">Sipariş & Müşteri Temsilcisi</span>
+                        <span class="contact-value">Kerim Bey</span>
                     </li>
                     <li>
-                        <strong>Adres:</strong> 
-                        Bahçelievler Mh. Fatih Cd. Gür Sk. No: 8/B<br>Yalova Merkez
+                        <span class="contact-label">Direkt Hat / WhatsApp</span>
+                        <a href="tel:+905339783677" class="contact-value phone-number">0533 978 36 77</a>
+                    </li>
+                    <li>
+                        <span class="contact-label">Merkez Adres</span>
+                        <span class="contact-value" style="font-size: 1rem; font-weight: 400;">Bahçelievler Mh. Fatih Cd.<br>Gür Sk. No: 8/B Yalova Merkez</span>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="copyright">
-            &copy; 2026 YTÜ - Yalova Temizlik Ürünleri. Tüm hakları saklıdır. (Smy Simay güvencesiyle)
+            &copy; 2026 YTÜ - Yalova Temizlik Ürünleri by Smy Simay. Tüm hakları saklıdır.
         </div>
     </footer>
 
